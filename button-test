@@ -1,0 +1,31 @@
+
+const int but1 = 20;
+const int but2 = 21;
+const int but3 = 18;
+const int but4 = 19;
+const int led1 = 24;
+const int led2 = 25;
+const int led3 = 26;
+const int led4 = 27;
+
+int ledPins[] = { led1, led2, led3, led4 };
+int ledPinCount = 4;
+
+void setup() {
+
+  pinMode(but1, INPUT_PULLUP);
+  pinMode(but2, INPUT_PULLUP);
+  pinMode(but3, INPUT_PULLUP);
+  pinMode(but4, INPUT_PULLUP);
+  pinMode(led1, OUPUT);
+  pinMode(led2, OUPUT);
+  pinMode(led3, OUPUT);
+  pinMode(led4, OUPUT);
+  
+}
+
+void loop() {
+
+}
+  
+  
