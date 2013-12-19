@@ -1,0 +1,14 @@
+
+byte pin
+byte numPins = 40 //check number of pins
+
+void setup() {
+pin = 0;
+for (pin = 0, pin < numPins, pin++) {
+pinMode(pin, OUTPUT);
+  }
+}
+
+void loop() {
+
+}
