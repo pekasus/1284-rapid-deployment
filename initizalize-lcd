@@ -1,0 +1,22 @@
+//this code initializes 16,2 lcd and tests backlight and all 32 positions.
+
+#include<LiquidTWI.h>
+#include<Wire.h>
+
+LiquidTWI lcd(0);
+
+void setup() {
+  lcd.begin(16,2);
+  lcd.setBacklight(HIGH);
+  lcd.print("1234567890123456");
+  lcd.setCursor(0,1);
+  lcd.print("1234567890123456");
+  delay(500);
+  lcd.clear();
+  delay (300);
+  lcd.print("Test complete");
+}
+
+void loop() {
+
+}
