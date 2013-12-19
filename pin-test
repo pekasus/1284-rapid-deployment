@@ -1,14 +1,31 @@
-
 byte pin
-byte numPins = 40 //check number of pins
+byte numPins = 31 // number of pins
 
 void setup() {
-pin = 0;
-for (pin = 0, pin < numPins, pin++) {
-pinMode(pin, OUTPUT);
-  }
+  for(pin = 0; pin < numPins; pin++) {
+  pinMode(pin, OUTPUT);
+    }
 }
 
 void loop() {
-
+  for(pin = 0; pin < numPins; pin++) {
+    digitalWrite(pin, HIGH);
+    delay(100);
+    }
+  delay(500);
+  for(pin = 0; pin < numPins; pin++) {
+    digitalWrite(pin, LOW);
+    delay(100);
+    }
+  delay(500);
+  int bright = 0;
+  while(bright < 255) {
+  for(pin = 24; pin < numPins; pin++) {
+      analogWrite(pin, bright);
+      delay(5);
+    }
+    bright++;
+    delay(5);
+  }
+  delay(500);
 }
