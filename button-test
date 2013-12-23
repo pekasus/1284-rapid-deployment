@@ -11,7 +11,7 @@ int keyPins[] = { key1, key2, key3, key4 };
 int keyPinCount = 4;
 int ledPins[] = { led1, led2, led3, led4 };
 int ledPinCount = 4;
-
+int counter;
 #include<LiquidTWI.h>
 #include<Wire.h>
 
@@ -23,16 +23,16 @@ void setup() {
   pinMode(key2, INPUT_PULLUP);
   pinMode(key3, INPUT_PULLUP);
   pinMode(key4, INPUT_PULLUP);
-  pinMode(led1, OUPUT);
-  pinMode(led2, OUPUT);
-  pinMode(led3, OUPUT);
-  pinMode(led4, OUPUT);
-  int counter = 0;
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+  counter = 0;
   lcd.begin(16,2);
   lcd.setBacklight(HIGH);
   lcd.print("Ready");
   delay(300);
-  lcd.clear;
+  lcd.clear();
   
 }
 
@@ -40,8 +40,8 @@ void loop() {
   for (int thisPin = 0; thisPin < keyPinCount; thisPin++) {
     boolean val = digitalRead(keyPins[thisPin]);
     if (val == LOW) {
-      lcd.print("Button ")
-      lcd.print(thisPin +1);
+      lcd.print("Button ");
+      lcd.print(thisPin + 1);
       lcd.setCursor(0,1);
       counter = counter + 1;
       lcd.print(counter);
@@ -49,5 +49,5 @@ void loop() {
       lcd.clear();
   }
 }
-  
+}
   
