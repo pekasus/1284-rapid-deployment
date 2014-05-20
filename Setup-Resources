@@ -2,8 +2,8 @@ Install drivers for FTDI (USB)
 
 http://www.ftdichip.com/FTDrivers.htm
 
-1284 drivers
-https://www.dropbox.com/sh/n71ye08hpi1c8eg/ZIfxYzDhMg
+1284 bootloader
+https://www.dropbox.com/sh/3yq0gptexy8u6iu/AAAVWLnHF4VBEERVLhhEEuBHa
 
 IPUT_PULLUP needs to be added to bootloader files
 https://github.com/wijnen/mighty-1284p/commit/61f24a9ad4b32288aa73c544413c985c20c66af4
